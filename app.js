@@ -1,8 +1,12 @@
+import Dashboard from "./pages/Dashboard.js";
+import Products from "./pages/Products.js";
+import Call from "./pages/Call.js";
+
 function router(params) {
   const routes = [
-    { path: "/", view: () => console.log("dashboard page") },
-    { path: "/products", view: () => console.log("product page") },
-    { path: "/call", view: () => console.log("call page") },
+    { path: "/", view: Dashboard },
+    { path: "/products", view: Products },
+    { path: "/call", view: Call },
   ];
 
   const potentialRoute = routes.map((item) => {
@@ -19,7 +23,7 @@ function router(params) {
       isMatch: true,
     };
   }
-  console.log(match.route.view());
+  document.querySelector(".main-page").innerHTML= match.route.view();
 }
 function navigateTo(url) {
   history.pushState(null, null, url);

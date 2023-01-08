@@ -32,6 +32,18 @@ function navigateTo(url) {
 
 window.addEventListener('popstate', router);
 
+const sidebar= document.querySelector(".sidebar");
+const sidebarToggler = document.querySelector(".sidebar-toggler");
+const root= document.documentElement;
+
+sidebarToggler.addEventListener("click",()=>{
+  sidebar.classList.toggle("mini-sidebar");
+  if(sidebar.classList.contains("mini-sidebar")){
+    root.style.setProperty("--sidebar-width",70+"px");
+  }else{
+    root.style.setProperty("--sidebar-width", 250 +"px");
+  }
+})
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.addEventListener("click", (e) => {

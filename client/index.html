@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="client/style.css" />
     <title>SPA Project</title>
   </head>
@@ -14,23 +15,32 @@
         <ul class="sidebar__items">
           <li class="sidebar__item">
             <a href="/" class="sidebar__link" data-link>
-              داشبورد
+               <span class="icon-container">
+                <i class="fa-solid fa-house"></i>
+              </span>
+              <span class="sidebar__item-label"> داشبورد </span>
             </a>
           </li>
           <li class="sidebar__item">
             <a href="products" class="sidebar__link" data-link>
-                محصولات
+               <span class="icon-container">
+                  <i class="fa-brands fa-product-hunt"></i>
+                </span>
+                <span class="sidebar__item-label"> محصولات </span>
             </a>
           </li>
           <li class="sidebar__item">
             <a href="call" class="sidebar__link" data-link>
-                تماس با ما
+                <span class="icon-container">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <span class="sidebar__item-label"> تماس با ما </span>
             </a>
           </li>
         </ul>
         <div class="app-version">
           <span class="app-version__label">SPA V.1</span>
-          <span class="icon-container">
+          <span class="icon-container sidebar-toggler">
             <i class="fas fa-chevron-right"></i>
           </span>
         </div>
